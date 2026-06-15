@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { BookingDialog } from '@/components/booking-dialog'
+import { BookingDialogServer } from '@/components/booking-dialog-server'
 
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -47,7 +47,7 @@ export function SiteFooter() {
             <h2 className="text-balance font-heading text-3xl font-semibold leading-tight text-foreground md:text-4xl">
               Let&apos;s create something worth keeping.
             </h2>
-            <BookingDialog label="Book a Consultation" />
+            <BookingDialogServer label="Book a Consultation" />
           </div>
 
           <div className="flex items-center gap-3">

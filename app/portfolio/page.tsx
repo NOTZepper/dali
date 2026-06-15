@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { PortfolioGrid } from '@/components/portfolio-grid'
-import { projects } from '@/lib/studio-data'
+import { getProjects, getServices } from '@/lib/queries'
 
 export const metadata: Metadata = {
   title: 'Portfolio — dalisolstice',
@@ -11,10 +11,11 @@ export const metadata: Metadata = {
     'Selected photography, videography, and design work from the dalisolstice studio.',
 }
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const [projects, services] = await Promise.all([getProjects(), getServices()])
   return (
     <div className="flex min-h-dvh flex-col">
-      <SiteHeader />
+      <SiteHeader services={services} />
       <main className="flex-1">
         <section className="mx-auto max-w-6xl px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24">
           <div className="mb-10 max-w-xl space-y-3 md:mb-14">

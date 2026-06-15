@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Camera, Film, PenTool } from 'lucide-react'
 
-import { services } from '@/lib/studio-data'
+import { getServices } from '@/lib/queries'
 
 const meta: Record<string, { icon: React.ElementType; image: string }> = {
   photography: { icon: Camera, image: '/images/work-photography.png' },
@@ -9,7 +9,8 @@ const meta: Record<string, { icon: React.ElementType; image: string }> = {
   design: { icon: PenTool, image: '/images/work-design.png' },
 }
 
-export function ServicesSection() {
+export async function ServicesSection() {
+  const services = await getServices()
   return (
     <section className="border-t border-border/60 bg-secondary/30">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">

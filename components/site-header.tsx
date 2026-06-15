@@ -7,13 +7,14 @@ import { Menu, X } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 import { BookingDialog } from '@/components/booking-dialog'
+import { type Service } from '@/lib/studio-data'
 
 const links = [
   { href: '/', label: 'Home' },
   { href: '/portfolio', label: 'Portfolio' },
 ]
 
-export function SiteHeader() {
+export function SiteHeader({ services }: { services: Service[] }) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
@@ -42,7 +43,7 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <BookingDialog label="Book a Consultation" size="sm" />
+          <BookingDialog services={services} label="Book a Consultation" size="sm" />
         </nav>
 
         <button
@@ -74,7 +75,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="mt-2 px-2" onClick={() => setOpen(false)}>
-              <BookingDialog label="Book a Consultation" className="w-full" />
+              <BookingDialog services={services} label="Book a Consultation" className="w-full" />
             </div>
           </nav>
         </div>

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 
-import { BookingDialog } from '@/components/booking-dialog'
+import { BookingDialogServer } from '@/components/booking-dialog-server'
 
 export function Hero() {
   return (
@@ -21,7 +21,7 @@ export function Hero() {
             for light.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <BookingDialog label="Book a Consultation" />
+            <BookingDialogServer label="Book a Consultation" />
             <Link
               href="/portfolio"
               className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary"

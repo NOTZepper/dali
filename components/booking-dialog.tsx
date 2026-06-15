@@ -20,7 +20,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
-import { services } from '@/lib/studio-data'
+import { type Service } from '@/lib/studio-data'
 
 const serviceIcons: Record<string, React.ElementType> = {
   photography: Camera,
@@ -47,6 +47,7 @@ const MONTHS = [
 ]
 
 type BookingDialogProps = {
+  services: Service[]
   label?: string
   variant?: 'default' | 'outline' | 'ghost' | 'secondary' | 'link'
   size?: 'default' | 'sm' | 'lg'
@@ -55,6 +56,7 @@ type BookingDialogProps = {
 }
 
 export function BookingDialog({
+  services,
   label = 'Book a Consultation',
   variant = 'default',
   size = 'lg',

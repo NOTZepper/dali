@@ -6,12 +6,13 @@ import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/hero'
 import { ServicesSection } from '@/components/services-section'
 import { PortfolioGrid } from '@/components/portfolio-grid'
-import { projects } from '@/lib/studio-data'
+import { getProjects, getServices } from '@/lib/queries'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [projects, services] = await Promise.all([getProjects(), getServices()])
   return (
     <div className="flex min-h-dvh flex-col">
-      <SiteHeader />
+      <SiteHeader services={services} />
       <main className="flex-1">
         <Hero />
         <ServicesSection />
