@@ -17,19 +17,19 @@ export default async function HomePage() {
         <Hero />
         <ServicesSection />
 
-        <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-24">
-          <div className="mb-8 flex items-end justify-between gap-4 md:mb-10">
+        <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+          <div className="mb-10 flex items-end justify-between gap-4">
             <div className="space-y-3">
               <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
                 Selected work
               </p>
-              <h2 className="text-balance font-heading text-3xl font-semibold leading-tight text-foreground md:text-5xl">
+              <h2 className="text-balance font-heading text-4xl font-semibold leading-tight text-foreground md:text-5xl">
                 Recent projects.
               </h2>
             </div>
             <Link
               href="/portfolio"
-              className="group inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary"
+              className="group hidden shrink-0 items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary sm:inline-flex"
             >
               View all
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -17,12 +17,12 @@ export default async function PortfolioPage() {
     <div className="flex min-h-dvh flex-col">
       <SiteHeader services={services} />
       <main className="flex-1">
-        <section className="mx-auto max-w-6xl px-5 pt-10 pb-12 md:px-8 md:pt-20 md:pb-24">
-          <div className="mb-8 max-w-xl space-y-3 md:mb-14">
+        <section className="mx-auto max-w-6xl px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24">
+          <div className="mb-10 max-w-xl space-y-3 md:mb-14">
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
               Portfolio
             </p>
-            <h1 className="text-balance font-heading text-3xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="text-balance font-heading text-5xl font-semibold leading-[1.05] text-foreground md:text-6xl">
               A body of considered work.
             </h1>
             <p className="text-pretty text-base leading-relaxed text-muted-foreground">

@@ -6,13 +6,13 @@ import { BookingDialogServer } from '@/components/booking-dialog-server'
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-5 pt-10 pb-12 md:px-8 md:pt-20 md:pb-24">
-      <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
-        <div className="space-y-6 md:space-y-7">
+    <section className="mx-auto max-w-6xl px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24">
+      <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+        <div className="space-y-7">
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
             Photography · Videography · Design
           </p>
-          <h1 className="text-balance font-heading text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-7xl">
+          <h1 className="text-balance font-heading text-5xl font-semibold leading-[1.05] text-foreground md:text-7xl">
             A studio for the considered image.
           </h1>
           <p className="max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
@@ -20,8 +20,8 @@ export function Hero() {
             cinematic motion, and design with patience, intention, and an eye
             for light.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-            <BookingDialogServer label="Book a Free Call" />
+          <div className="flex flex-wrap items-center gap-4">
+            <BookingDialogServer label="Book a Consultation" />
             <Link
               href="/portfolio"
               className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary"
@@ -32,7 +32,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-muted sm:aspect-[4/5] md:aspect-[3/4]">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-muted md:aspect-[3/4]">
           <Image
             src="/images/hero.png"
             alt="Editorial studio photograph of a model in a flowing burgundy garment"
