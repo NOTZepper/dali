@@ -43,12 +43,12 @@ export function SiteHeader({ services }: { services: Service[] }) {
               {link.label}
             </Link>
           ))}
-          <BookingDialog services={services} label="Book a Consultation" size="sm" />
+          <BookingDialog services={services} label="Book a Free Call" size="sm" />
         </nav>
 
         <button
           type="button"
-          className="flex size-9 items-center justify-center text-foreground md:hidden"
+          className="flex size-11 items-center justify-center text-foreground md:hidden"
           aria-label="Toggle menu"
           onClick={() => setOpen((o) => !o)}
         >
@@ -65,7 +65,7 @@ export function SiteHeader({ services }: { services: Service[] }) {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  'rounded-md px-2 py-2 text-sm transition-colors',
+                  'rounded-md px-3 py-3 text-base transition-colors',
                   pathname === link.href
                     ? 'bg-primary/5 text-primary'
                     : 'text-foreground hover:bg-muted',
@@ -74,8 +74,8 @@ export function SiteHeader({ services }: { services: Service[] }) {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-2 px-2" onClick={() => setOpen(false)}>
-              <BookingDialog services={services} label="Book a Consultation" className="w-full" />
+            <div className="mt-3 px-0" onClick={() => setOpen(false)}>
+              <BookingDialog services={services} label="Book a Free Call" className="w-full" />
             </div>
           </nav>
         </div>

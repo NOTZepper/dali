@@ -57,7 +57,7 @@ type BookingDialogProps = {
 
 export function BookingDialog({
   services,
-  label = 'Book a Consultation',
+  label = 'Book a Free Call',
   variant = 'default',
   size = 'lg',
   className,
@@ -127,7 +127,7 @@ export function BookingDialog({
               </h2>
               <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
                 Thank you for reaching out to dalisolstice. We&apos;ll be in
-                touch shortly to confirm the details of your consultation.
+                touch shortly to confirm the details of your free call.
               </p>
             </div>
             <Button variant="outline" onClick={() => handleOpenChange(false)}>
@@ -210,7 +210,7 @@ export function BookingDialog({
                       type="button"
                       aria-label="Previous month"
                       onClick={() => setViewDate(new Date(year, month - 1, 1))}
-                      className="flex size-8 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted"
+                      className="flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted"
                     >
                       <ChevronLeft className="size-4" />
                     </button>
@@ -221,7 +221,7 @@ export function BookingDialog({
                       type="button"
                       aria-label="Next month"
                       onClick={() => setViewDate(new Date(year, month + 1, 1))}
-                      className="flex size-8 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted"
+                      className="flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted"
                     >
                       <ChevronRight className="size-4" />
                     </button>
@@ -247,7 +247,7 @@ export function BookingDialog({
                           disabled={disabled}
                           onClick={() => setSelectedDate(d)}
                           className={cn(
-                            'flex aspect-square items-center justify-center rounded-md text-sm transition-colors',
+                            'flex min-h-[40px] items-center justify-center rounded-md text-sm transition-colors',
                             disabled && 'text-muted-foreground/30',
                             !disabled &&
                               !active &&
@@ -274,7 +274,7 @@ export function BookingDialog({
                             type="button"
                             onClick={() => setSelectedTime(t)}
                             className={cn(
-                              'rounded-md border px-3 py-1.5 text-sm transition-colors',
+                              'min-h-[40px] rounded-md border px-4 py-2 text-sm transition-colors',
                               selectedTime === t
                                 ? 'border-primary bg-primary text-primary-foreground'
                                 : 'border-border text-foreground hover:border-primary/40',
@@ -332,7 +332,7 @@ export function BookingDialog({
                     )}
                   </div>
                   <Button type="submit" className="w-full" size="lg">
-                    Secure My Consultation
+                    Book My Free Call
                   </Button>
                 </form>
               )}

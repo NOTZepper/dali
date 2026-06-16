@@ -13,17 +13,17 @@ export async function ServicesSection() {
   const services = await getServices()
   return (
     <section className="border-t border-border/60 bg-secondary/30">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-24">
         <div className="max-w-xl space-y-3">
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
             What we do
           </p>
-          <h2 className="text-balance font-heading text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+          <h2 className="text-balance font-heading text-3xl font-semibold leading-tight text-foreground md:text-5xl">
             Three disciplines, one sensibility.
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 md:mt-12 md:grid-cols-3 md:gap-6">
           {services.map((service) => {
             const { icon: Icon, image } = meta[service.id]
             return (
