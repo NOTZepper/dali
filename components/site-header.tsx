@@ -43,7 +43,7 @@ export function SiteHeader({ services }: { services: Service[] }) {
               {link.label}
             </Link>
           ))}
-          <BookingDialog services={services} label="Book a Consultation" size="sm" />
+          <BookingDialog services={services} label="Book a free call" size="sm" />
         </nav>
 
         <button
@@ -75,7 +75,7 @@ export function SiteHeader({ services }: { services: Service[] }) {
               </Link>
             ))}
             <div className="mt-2 px-2" onClick={() => setOpen(false)}>
-              <BookingDialog services={services} label="Book a Consultation" className="w-full" />
+              <BookingDialog services={services} label="Book a free call" className="w-full" />
             </div>
           </nav>
         </div>

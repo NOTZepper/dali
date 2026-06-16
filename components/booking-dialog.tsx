@@ -57,7 +57,7 @@ type BookingDialogProps = {
 
 export function BookingDialog({
   services,
-  label = 'Book a Consultation',
+  label = 'Book a free call',
   variant = 'default',
   size = 'lg',
   className,
@@ -114,7 +114,7 @@ export function BookingDialog({
       </DialogTrigger>
       <DialogContent
         showCloseButton={!submitted}
-        className="sm:max-w-md gap-0 overflow-hidden p-0"
+        className="max-h-[92dvh] overflow-y-auto sm:max-w-md gap-0 overflow-x-hidden p-0"
       >
         {submitted ? (
           <div className="flex flex-col items-center gap-4 px-6 py-12 text-center">
@@ -137,7 +137,7 @@ export function BookingDialog({
         ) : (
           <div className="flex flex-col">
             {/* Header / progress */}
-            <div className="border-b px-6 py-5">
+            <div className="border-b px-4 py-4 sm:px-6 sm:py-5">
               <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-primary">
                 Step {step} of 3
               </p>
@@ -159,7 +159,7 @@ export function BookingDialog({
               </div>
             </div>
 
-            <div className="px-6 py-5">
+            <div className="px-4 py-4 sm:px-6 sm:py-5">
               {/* Step 1 — service */}
               {step === 1 && (
                 <div className="flex flex-col gap-2.5">
@@ -247,7 +247,7 @@ export function BookingDialog({
                           disabled={disabled}
                           onClick={() => setSelectedDate(d)}
                           className={cn(
-                            'flex aspect-square items-center justify-center rounded-md text-sm transition-colors',
+                            'flex aspect-square min-h-[2.75rem] items-center justify-center rounded-md text-sm transition-colors',
                             disabled && 'text-muted-foreground/30',
                             !disabled &&
                               !active &&
@@ -274,7 +274,7 @@ export function BookingDialog({
                             type="button"
                             onClick={() => setSelectedTime(t)}
                             className={cn(
-                              'rounded-md border px-3 py-1.5 text-sm transition-colors',
+                              'rounded-md border px-3 py-2 text-sm transition-colors',
                               selectedTime === t
                                 ? 'border-primary bg-primary text-primary-foreground'
                                 : 'border-border text-foreground hover:border-primary/40',
@@ -332,7 +332,7 @@ export function BookingDialog({
                     )}
                   </div>
                   <Button type="submit" className="w-full" size="lg">
-                    Secure My Consultation
+                    Confirm Free Call
                   </Button>
                 </form>
               )}
